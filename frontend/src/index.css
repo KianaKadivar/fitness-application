@@ -1,5 +1,6 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap");
 
+@import "tailwindcss";
 @theme{
     --color-gray-20:#F8F4EB;
     --color-gray-50:#EFE6E6;
@@ -27,4 +28,11 @@
     --breakpoint-xs: 480px;
     --breakpoint-sm: 768px;
     --breakpoint-md: 1060px;
+}
+
+html, body, #root, .app{
+    height: 100%;
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    @apply text-gray-500 font-dmsans
 }
