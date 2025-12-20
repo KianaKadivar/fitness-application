@@ -3,6 +3,7 @@ import Navbar from './Scenes/Navbar'
 import { SelectedPage } from './Shared/types'
 import Home from './Scenes/Home'
 import Benefits from './Scenes/Benefits'
+import OurClasses from './Scenes/OurClasses'
 export default function App() {
   const [selectedPage,setSelectedPage]=useState<SelectedPage>(SelectedPage.Home)
   const [isTopOfPage,setIsTopOfPage]=useState<boolean>(false)
@@ -22,6 +23,7 @@ export default function App() {
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
       <Home setSelectedPage={setSelectedPage}/>
       <Benefits setSelectedPage={setSelectedPage}/>
+      <OurClasses setSelectedPage={setSelectedPage}/>
     </div>
   )
 }
