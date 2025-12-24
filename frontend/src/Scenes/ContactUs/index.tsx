@@ -4,12 +4,14 @@ import {motion} from "framer-motion"
 import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png"
 import HText from '../../Shared/HText'
 import { useForm } from 'react-hook-form'
+import EvolveText from "../../assets/EvolveText.png"
+
 
 type Props = {
     setSelectedPage:(value:SelectedPage)=>void
 }
 
-const inputStyles='w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white'
+const inputStyles='mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white'
 
 const ContactUs = ({setSelectedPage}: Props) => {
     const {register,trigger,formState:{errors}}=useForm()
@@ -88,7 +90,30 @@ const ContactUs = ({setSelectedPage}: Props) => {
                               "Max length is 2000 char."}
                             </p>
                         )}
+                        <button type='submit' className='mt-5 bg-secondary-500 rounded-lg px-20 py-3 transition duration-500 hover:text-white'>
+                            SUBMIT
+                        </button>
                     </form>
+                </motion.div>
+                {/* Image */}
+                <motion.div className='relative mt-16 basis-2/5 md:mt-0'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once:true,amount:0.5}}
+                    transition={{delay:0.2,duration:0.5}}
+                    variants={{
+                        hidden:{opacity:0,y:50},
+                        visible:{opacity:1,y:0}
+                    }}                 
+                >
+                    <img
+                      src={EvolveText}
+                      alt="Evolve text"
+                      className="hidden md:block md:absolute md:-bottom-18 md:-right-10 md:z-[-1] md:w-[720px] md:h-auto"
+                    />
+                    <div>
+                        <img className='w-full' src={ContactUsPageGraphic} alt='contact us page graphic'/>
+                    </div>
                 </motion.div>
             </div>
         </motion.div>
