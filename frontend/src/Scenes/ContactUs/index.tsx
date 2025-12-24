@@ -1,4 +1,3 @@
-import React from 'react'
 import { SelectedPage } from '../../Shared/types'
 import {motion} from "framer-motion"
 import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png"

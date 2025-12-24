@@ -5,12 +5,13 @@ import Home from './Scenes/Home'
 import Benefits from './Scenes/Benefits'
 import OurClasses from './Scenes/OurClasses'
 import ContactUs from './Scenes/ContactUs'
+import Footer from './Scenes/Footer'
 export default function App() {
   const [selectedPage,setSelectedPage]=useState<SelectedPage>(SelectedPage.Home)
-  const [isTopOfPage,setIsTopOfPage]=useState<boolean>(false)
+  const [isTopOfPage,setIsTopOfPage]=useState<boolean>(true)
   useEffect(()=>{
     const handleScroll=()=>{
-      if(window.screenY===0){
+      if(window.scrollY===0){
         setIsTopOfPage(true)
         setSelectedPage(SelectedPage.Home)
       }
@@ -26,6 +27,7 @@ export default function App() {
       <Benefits setSelectedPage={setSelectedPage}/>
       <OurClasses setSelectedPage={setSelectedPage}/>
       <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer/>
     </div>
   )
 }

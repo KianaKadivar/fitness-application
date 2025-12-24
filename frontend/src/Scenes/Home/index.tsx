@@ -1,4 +1,3 @@
-import React from 'react'
 import { SelectedPage } from '../../Shared/types'
 import useMediaQuery from '../../Hooks/useMediaQuery'
 import HomePageText from "@/assets/HomePageText.png"
