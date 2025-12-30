@@ -1,4 +1,4 @@
-import { SelectedPage } from '../../Shared/types'
+import {type SelectedPage } from '../../Shared/types'
 import useMediaQuery from '../../Hooks/useMediaQuery'
 import HomePageText from "@/assets/HomePageText.png"
 import HomePageGraphic from "@/assets/HomePageGraphic.png"
@@ -20,7 +20,7 @@ const Home = ({setSelectedPage}: Props) => {
     <section id='home' className='gap-16 bg-gray-20 py-10  md:h-full md:pb-0'>
         {/* Image & Main header */}
         <motion.div
-            onViewportEnter={()=>setSelectedPage(SelectedPage.Home)}
+            onViewportEnter={()=>setSelectedPage("home")}
             className='md:flex mx-auto mb-20 w-5/6 items-center justify-center md:h-5/6'  >
             {/* Main header */}
             <div className='z-10 mt-32 md:basis-3/5'>
@@ -64,8 +64,8 @@ const Home = ({setSelectedPage}: Props) => {
                     className='mt-8 flex items-center gap-8 md:justify-start'>
                         <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
                         <AnchorLink className='font-bold text-sm underline text-primary-500 hover:text-secondary-500'
-                        onClick={()=>setSelectedPage(SelectedPage.ContactUs)}
-                        href={`#${SelectedPage.ContactUs}`}
+                        onClick={()=>setSelectedPage("contactus")}
+                        href={"#contactus"}
                         >
                             <p>Learn More</p>
                         </AnchorLink>

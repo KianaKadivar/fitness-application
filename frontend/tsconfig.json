@@ -4,7 +4,7 @@
       "@/*": ["./src/*"]
     },
     "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "strict": true,  
   },
   "files": [],
   "references": [

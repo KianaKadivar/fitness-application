@@ -1,5 +1,4 @@
-import React from 'react'
-import { SelectedPage, type BenefitType } from '../../Shared/types'
+import {type SelectedPage, type BenefitType } from '../../Shared/types'
 import { HomeModernIcon,UserGroupIcon,AcademicCapIcon } from '@heroicons/react/24/solid'
 import {motion} from "framer-motion"
 import HText from '../../Shared/HText'
@@ -41,7 +40,7 @@ const container={
 const Benefits = ({setSelectedPage}: Props) => {
   return (
     <section id='benefits' className='mx-auto my-0 md:my-25 min-h-full w-5/6 py-20'>
-        <motion.div onViewportEnter={()=>setSelectedPage(SelectedPage.Benefits)}>
+        <motion.div onViewportEnter={()=>setSelectedPage("benefits")}>
             {/* Header */}
             <motion.div className='md:my-5 md:w-3/5' 
                 initial="hidden"
