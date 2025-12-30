@@ -5,6 +5,8 @@
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,  
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": false
   },
   "files": [],
   "references": [

@@ -4,6 +4,7 @@ import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png"
 import HText from '../../Shared/HText'
 import { useForm } from 'react-hook-form'
 import EvolveText from "../../assets/EvolveText.png"
+import type React from 'react'
 
 
 type Props = {
@@ -14,7 +15,7 @@ const inputStyles='mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-w
 
 const ContactUs = ({setSelectedPage}: Props) => {
     const {register,trigger,formState:{errors}}=useForm()
-    const handleSubmit=async(e:any)=>{
+    const handleSubmit=async(e:React.FormEvent<HTMLFormElement>)=>{
         const isValid=await trigger()
         if (!isValid){
             e.preventDefault()
